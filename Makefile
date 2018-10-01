@@ -21,5 +21,5 @@ datafiles = help/attackTime-help.pd help/attackTime~-help.pd help/bark-help.pd h
 make-lib-executable=yes
 
 # provide the path to pd-lib-builder
-PDLIBBUILDER_DIR=/home/yourname/somedirectory/pd-lib-builder/
+PDLIBBUILDER_DIR=./pd-lib-builder/
 include $(PDLIBBUILDER_DIR)/Makefile.pdlibbuilder
