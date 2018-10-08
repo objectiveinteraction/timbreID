@@ -1,10 +1,18 @@
 ### about timbreID ###
 
-timbreID is a single binary external library that contains many different Pd objects. To use it, you must tell Pd to load the timbreIDLib binary file at startup via Pd's "Preferences/Startup" dialog. To do so, make a new startup path in the Startup dialog, and provide the path to the timbreIDLib binary in this directory. Note that you must not list the extension of the timbreIDLib file (i.e., pd_linux, pd_darwin, or dll). For example:
+timbreID is a library that contains many different Pd objects. To use it, you must tell Pd to load the timbreIDLib binary file at startup via Pd's "Preferences/Startup" dialog. To do so, make a new startup path in the Startup dialog, and provide the path to the timbreIDLib binary in this directory. Note that you must not list the extension of the timbreIDLib file (i.e., pd_linux, pd_darwin, or dll). For example:
 
 /home/yourname/pd_libs/timbreID/timbreIDLib
 
-Once you have listed the path to timbreIDLib in the Startup dialog, you must quit and restart Pd. If timbreID is loaded successfully, you will see a message in Pd's post window stating the timbreID version number.
+When using Pd's Startup dialog on Windows, note that you still give the path with forward slashes, and spaces in the path are ok. There is still no need to list the library file extension of .dll. For instance:
+
+C:/Users/Your Name/Documents/Pd/externals/timbreID/timbreIDLib
+
+Once you have listed the path to timbreIDLib in the Startup dialog, you must quit and restart Pd. Alternatively, you can use the [declare] object to load timbreID as needed per patch. Assuming that timbreID was installed to the default Externals Install Directory, adding a [declare] object like this:
+
+[declare -lib timbreID/timbreIDLib]
+
+should work. If timbreID is loaded successfully (using either method above), you will see a message in Pd's post window stating the timbreID version number.
 
 
 

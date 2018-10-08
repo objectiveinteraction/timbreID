@@ -1,7 +1,7 @@
 # Makefile for timbreIDLib
 
-# specify a location for Pd source if desired
-# PDDIR = /home/yourname/somedirectory/pd-0.48-2
+# specify a location for Pd if desired
+# PDDIR = /home/yourname/somedirectory/pd-0.49-0
 
 lib.name = timbreIDLib
 
